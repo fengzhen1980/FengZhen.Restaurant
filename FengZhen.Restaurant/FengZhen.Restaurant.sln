@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FengZhen.Restaurant.Domain"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FengZhen.Restaurant.WebApp", "FengZhen.Restaurant.WebApp\FengZhen.Restaurant.WebApp.csproj", "{205A7A7B-B821-4CE0-ACCF-A022290DE48D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FengZhen.Restaurant.UnitTests", "FengZhen.Restaurant.UnitTests\FengZhen.Restaurant.UnitTests.csproj", "{DBFB2B50-FFE4-4462-9489-40EBA1E5C8DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{205A7A7B-B821-4CE0-ACCF-A022290DE48D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{205A7A7B-B821-4CE0-ACCF-A022290DE48D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{205A7A7B-B821-4CE0-ACCF-A022290DE48D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBFB2B50-FFE4-4462-9489-40EBA1E5C8DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBFB2B50-FFE4-4462-9489-40EBA1E5C8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBFB2B50-FFE4-4462-9489-40EBA1E5C8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBFB2B50-FFE4-4462-9489-40EBA1E5C8DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
