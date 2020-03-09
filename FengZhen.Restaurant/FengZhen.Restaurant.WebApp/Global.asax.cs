@@ -13,6 +13,8 @@ namespace FengZhen.Restaurant.WebApp
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            IocConfig.ConfigIoc();
         }
     }
 }
