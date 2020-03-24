@@ -1,16 +1,14 @@
 ﻿using FengZhen.Restaurant.Domain.Entities;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FengZhen.Restaurant.Domain.Concrete
+namespace FengZhen.Restaurant.Domain.Abstract
 {
-    public class EFDbContext : DbContext
+    public interface ICategoriesRepository
     {
-        public DbSet<Food> Foods { get; set; }
-
+        IEnumerable<Category> CategoriesList { get; }
     }
 }

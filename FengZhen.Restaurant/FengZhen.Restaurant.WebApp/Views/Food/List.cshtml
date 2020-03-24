@@ -1,15 +1,14 @@
-﻿@using FengZhen.Restaurant.Domain.Entities;
-@model IEnumerable<Food>
+﻿@model FengZhen.Restaurant.WebApp.Models.FoodsListViewModel
 
 @{
-    ViewBag.Title = "All Foods";
+    ViewBag.Title = "Food Information";
 }
-@foreach (var p in Model)
+@foreach (var p in Model.Foods)
 {
-    <div>
-        <h3>@p.Name</h3>
-        @p.Description
-        <h4>@p.Price.ToString("c")</h4>
-    </div>
+    @Html.Partial("FoodSummary", p)
 }
+
+<div class="btn-group pull-right">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = Model.currentCategory }))
+</div>
 

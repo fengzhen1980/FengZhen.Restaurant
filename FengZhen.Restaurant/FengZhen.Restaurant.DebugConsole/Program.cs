@@ -14,7 +14,7 @@ namespace FengZhen.Restaurant.DebugConsole
         {
             using (var ctx = new EFDbContext())
             {
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 3; i++)
                 {
                     var food = new Food()
                     {
@@ -25,7 +25,7 @@ namespace FengZhen.Restaurant.DebugConsole
                     };
                     ctx.Foods.Add(food);
                 }
-               
+
                 ctx.SaveChanges();
             }
 

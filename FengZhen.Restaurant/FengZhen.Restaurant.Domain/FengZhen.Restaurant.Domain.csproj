@@ -51,9 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ICategoriesRepository.cs" />
     <Compile Include="Abstract\IFoodsRepository.cs" />
+    <Compile Include="Concrete\EFCategoriesRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFFoodsRepository.cs" />
+    <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Food.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

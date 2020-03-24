@@ -14,6 +14,39 @@ namespace FengZhen.Restaurant.WebApp
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                null,
+                "",
+                new
+                {
+                controller = "Food",
+                action = "List",
+                category = (string)null,
+                page = 1
+                });
+
+            routes.MapRoute(
+                null,
+                "Page{page}",
+                new
+                { 
+                    controller = "Food", 
+                    action = "List", 
+                    category = (string)null 
+                },
+                new { page = @"\d+" }
+                );
+
+            routes.MapRoute(
+                null,
+                "{category}",
+                new 
+                { 
+                    controller = "Food",
+                    action = "List",
+                    page = 1
+                });
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new 
@@ -21,8 +54,7 @@ namespace FengZhen.Restaurant.WebApp
                     controller = "Food", 
                     action = "List", 
                     id = UrlParameter.Optional
-                }
-            );
+                });
         }
     }
 }
