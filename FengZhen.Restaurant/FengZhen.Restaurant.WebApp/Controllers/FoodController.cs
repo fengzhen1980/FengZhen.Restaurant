@@ -10,7 +10,7 @@ namespace FengZhen.Restaurant.WebApp.Controllers
 {
     public class FoodController : Controller
     {
-        public const int PageSize = 2;
+        public const int PageSize = 5;
 
         public IFoodsRepository FoodsRepository { get; set; }
 

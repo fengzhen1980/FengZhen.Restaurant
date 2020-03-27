@@ -47,6 +47,13 @@ namespace FengZhen.Restaurant.WebApp
                 });
 
             routes.MapRoute(
+                null,
+                "{category}/Page{page}",
+                new { controller = "Food", action = "List" },
+                new { page = @"\d+" }
+                );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new 
