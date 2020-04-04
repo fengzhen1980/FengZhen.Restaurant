@@ -1,3 +1,5 @@
+using FengZhen.Restaurant.Domain.Entities;
+using FengZhen.Restaurant.WebApp.Infrastructure.Binders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,8 @@ namespace FengZhen.Restaurant.WebApp
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             IocConfig.ConfigIoc();
+
+            ModelBinders.Binders.Add(typeof(Cart), new CartModelBinder());
         }
     }
 }

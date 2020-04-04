@@ -22,6 +22,8 @@ namespace FengZhen.Restaurant.WebApp
             ///////////////////////////////
             builder.RegisterInstance<IFoodsRepository>(new EFFoodsRepository()).PropertiesAutowired();
 
+            builder.RegisterInstance<IOrderProcessor>(new EmailOrderProcessor(new EmailSettings())).PropertiesAutowired();
+
             //builder.RegisterInstance<ICategoriesRepository>(new EFCategoriesRepository()).PropertiesAutowired();
 
             var container = builder.Build();
