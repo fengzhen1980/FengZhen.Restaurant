@@ -10,5 +10,9 @@ namespace FengZhen.Restaurant.Domain.Abstract
     public interface IFoodsRepository
     {
         IEnumerable<Food> FoodsList { get; }
+
+        void SaveFood(Food food);
+
+        Food DeleteFood(int foodId);
     }
 }
