@@ -1,4 +1,5 @@
 ﻿using FengZhen.Restaurant.Domain.Abstract;
+using FengZhen.Restaurant.Domain.Entities;
 using FengZhen.Restaurant.WebApp.Models;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,20 @@ namespace FengZhen.Restaurant.WebApp.Controllers
             };
 
             return View(model);
+        }
+
+        public FileContentResult GetImage(int foodId)
+        {
+            Food foodItem = FoodsRepository.FoodsList.FirstOrDefault(x => x.FoodId == foodId);
+
+            if (foodItem != null)
+            {
+                return File(foodItem.ImageData, foodItem.ImageMimeType);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

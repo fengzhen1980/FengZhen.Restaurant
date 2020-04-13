@@ -97,6 +97,10 @@
     <Compile Include="Migrations\202004120713560_AdminUsers.designer.cs">
       <DependentUpon>202004120713560_AdminUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004130215020_FoodsPhoto.cs" />
+    <Compile Include="Migrations\202004130215020_FoodsPhoto.designer.cs">
+      <DependentUpon>202004130215020_FoodsPhoto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -113,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004120713560_AdminUsers.resx">
       <DependentUpon>202004120713560_AdminUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004130215020_FoodsPhoto.resx">
+      <DependentUpon>202004130215020_FoodsPhoto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
