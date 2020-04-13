@@ -2,6 +2,8 @@
 using Autofac.Integration.Mvc;
 using FengZhen.Restaurant.Domain.Abstract;
 using FengZhen.Restaurant.Domain.Concrete;
+using FengZhen.Restaurant.WebApp.Abstract;
+using FengZhen.Restaurant.WebApp.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +26,9 @@ namespace FengZhen.Restaurant.WebApp
 
             builder.RegisterInstance<IOrderProcessor>(new EmailOrderProcessor(new EmailSettings())).PropertiesAutowired();
 
-            //builder.RegisterInstance<ICategoriesRepository>(new EFCategoriesRepository()).PropertiesAutowired();
+            builder.RegisterType<EFDbContext>();
+
+            builder.RegisterType<EFAuthProvider>().PropertiesAutowired().As<IAuthProvider>().PropertiesAutowired();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

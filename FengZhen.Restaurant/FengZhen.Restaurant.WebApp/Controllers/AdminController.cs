@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace FengZhen.Restaurant.WebApp.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private IFoodsRepository repository;

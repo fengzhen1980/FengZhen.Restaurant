@@ -12,5 +12,6 @@ namespace FengZhen.Restaurant.Domain.Concrete
     {
         public DbSet<Food> Foods { get; set; }
 
+        public DbSet<AdminUser> AdminUsers { get; set; }
     }
 }
