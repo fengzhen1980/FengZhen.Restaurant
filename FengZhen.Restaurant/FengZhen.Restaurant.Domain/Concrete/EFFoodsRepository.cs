@@ -32,6 +32,11 @@ namespace FengZhen.Restaurant.Domain.Concrete
                     dbEntity.Description = food.Description;
                     dbEntity.Category = food.Category;
                     dbEntity.Price = food.Price;
+                    if (food.ImageData != null)
+                    {
+                        dbEntity.ImageData = food.ImageData;
+                        dbEntity.ImageMimeType = food.ImageMimeType;
+                    }
                 }
             }
             context.SaveChanges();

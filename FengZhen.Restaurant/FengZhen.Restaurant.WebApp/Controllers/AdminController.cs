@@ -31,10 +31,16 @@ namespace FengZhen.Restaurant.WebApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Food food)
+        public ActionResult Edit(Food food, HttpPostedFileBase image = null)
         {
             if (ModelState.IsValid)
             {
+                if (image != null)
+                {
+                    food.ImageMimeType = image.ContentType;
+                    food.ImageData = new byte[image.ContentLength];
+                    image.InputStream.Read(food.ImageData, 0, image.ContentLength);
+                }
                 repository.SaveFood(food);
                 TempData["message"] = string.Format("{0} has been saved.", food.Name);
                 return RedirectToAction("Index");
